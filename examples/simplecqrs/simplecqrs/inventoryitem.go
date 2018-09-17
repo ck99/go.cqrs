@@ -30,8 +30,9 @@ func (a *InventoryItem) Create(name string) error {
 		return errors.New("The name can not be empty.")
 	}
 
+	version := 1
 	a.Apply(ycq.NewEventMessage(a.AggregateID(),
-		&InventoryItemCreated{ID: a.AggregateID(), Name: name}), true)
+		&InventoryItemCreated{ID: a.AggregateID(), Name: name}, &version), true)
 
 	return nil
 }
@@ -42,8 +43,9 @@ func (a *InventoryItem) ChangeName(newName string) error {
 		return errors.New("The name can not be empty.")
 	}
 
+	version := 1
 	a.Apply(ycq.NewEventMessage(a.AggregateID(),
-		&InventoryItemRenamed{ID: a.AggregateID(), NewName: newName}), true)
+		&InventoryItemRenamed{ID: a.AggregateID(), NewName: newName}, &version), true)
 
 	return nil
 }
@@ -58,8 +60,9 @@ func (a *InventoryItem) Remove(count int) error {
 		return errors.New("Can not remove more items from inventory than the number of items in inventory.")
 	}
 
+	version := 1
 	a.Apply(ycq.NewEventMessage(a.AggregateID(),
-		&ItemsRemovedFromInventory{ID: a.AggregateID(), Count: count}), true)
+		&ItemsRemovedFromInventory{ID: a.AggregateID(), Count: count}, &version), true)
 
 	return nil
 }
@@ -70,8 +73,9 @@ func (a *InventoryItem) CheckIn(count int) error {
 		return errors.New("Must have a count greater than 0 to add to inventory.")
 	}
 
+	version := 1
 	a.Apply(ycq.NewEventMessage(a.AggregateID(),
-		&ItemsCheckedIntoInventory{ID: a.AggregateID(), Count: count}), true)
+		&ItemsCheckedIntoInventory{ID: a.AggregateID(), Count: count}, &version), true)
 
 	return nil
 }
@@ -82,8 +86,9 @@ func (a *InventoryItem) Deactivate() error {
 		return errors.New("Already deactivated.")
 	}
 
+	version := 1
 	a.Apply(ycq.NewEventMessage(a.AggregateID(),
-		&InventoryItemDeactivated{ID: a.AggregateID()}), true)
+		&InventoryItemDeactivated{ID: a.AggregateID()}, &version), true)
 
 	return nil
 }

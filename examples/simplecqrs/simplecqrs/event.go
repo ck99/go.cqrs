@@ -12,6 +12,7 @@ type InventoryItemCreated struct {
 type InventoryItemRenamed struct {
 	ID      string
 	NewName string
+	Original int
 }
 
 // InventoryItemDeactivated event
