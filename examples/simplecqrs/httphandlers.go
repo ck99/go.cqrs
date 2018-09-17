@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jetbasrawi/go.cqrs"
-	"github.com/jetbasrawi/go.cqrs/examples/simplecqrs/simplecqrs"
+	"github.com/ck99/go.cqrs"
+	"github.com/ck99/go.cqrs/examples/simplecqrs/simplecqrs"
 )
 
 var t = template.Must(template.ParseGlob("templates/*"))

@@ -17,7 +17,7 @@ package ycq
 import (
 	"reflect"
 
-	"github.com/jetbasrawi/go.cqrs/internal/uuid"
+	"github.com/ck99/go.cqrs/internal/uuid"
 )
 
 // typeOf is a convenience function that returns the name of a type

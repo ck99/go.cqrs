@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jetbasrawi/go.cqrs"
-	"github.com/jetbasrawi/go.cqrs/examples/simplecqrs/simplecqrs"
+	"github.com/ck99/go.cqrs"
+	"github.com/ck99/go.cqrs/examples/simplecqrs/simplecqrs"
 	"github.com/jetbasrawi/go.geteventstore"
 )
 

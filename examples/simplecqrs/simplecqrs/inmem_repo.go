@@ -1,7 +1,7 @@
 package simplecqrs
 
 import (
-	"github.com/jetbasrawi/go.cqrs"
+	"github.com/ck99/go.cqrs"
 )
 
 // InMemoryRepo provides an in memory repository implementation.

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"log"
 
-	"github.com/jetbasrawi/go.cqrs"
+	"github.com/ck99/go.cqrs"
 )
 
 var bullShitDatabase *BullShitDatabase

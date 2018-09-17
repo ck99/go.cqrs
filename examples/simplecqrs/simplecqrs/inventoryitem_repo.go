@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/jetbasrawi/go.cqrs"
+	"github.com/ck99/go.cqrs"
 	"github.com/jetbasrawi/go.geteventstore"
 )
 

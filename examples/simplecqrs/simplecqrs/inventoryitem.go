@@ -3,7 +3,7 @@ package simplecqrs
 import (
 	"errors"
 
-	"github.com/jetbasrawi/go.cqrs"
+	"github.com/ck99/go.cqrs"
 )
 
 // InventoryItem is the aggregate for an inventory item.
