@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/ck99/go.cqrs"
 	"github.com/ck99/go.cqrs/examples/simplecqrs/simplecqrs"
@@ -49,7 +50,7 @@ func init() {
 
 	// Create an in memory repository
 	//repo := simplecqrs.NewInMemoryRepo(eventBus)
-	client, err := goes.NewClient(nil, "http://localhost:2113")
+	client, err := goes.NewClient(nil, os.Getenv("EVENTSTORE"))
 	if err != nil {
 		log.Fatal(err)
 	}
